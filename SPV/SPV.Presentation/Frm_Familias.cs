@@ -1,4 +1,4 @@
-﻿using SPV.DataAccess.Entities;
+﻿using SPV.DataAcces.Entities;
 using SPV.Infrastructure.Services.Contracts;
 using SPV.Presentation.Reports;
 using System;
@@ -6,18 +6,18 @@ using System.Windows.Forms;
 
 namespace SPV.Presentation
 {
-    public partial class Frm_Punto_Venta : Form
+    public partial class Frm_Familias : Form
     {
         #region "Variables"
         private int nCodigo = 0;
         private int Estadoguarda = 0;
-        private readonly IPuntoVentaService _puntoVentaService;
+        private readonly IFamliaService _familiaService;
         #endregion
 
-        public Frm_Punto_Venta(IPuntoVentaService puntoVentaService)
+        public Frm_Familias(IFamliaService famliaService)
         {
             InitializeComponent();
-            _puntoVentaService = puntoVentaService;
+            _familiaService = famliaService;
         }
 
         #region "Métodos"
@@ -26,14 +26,14 @@ namespace SPV.Presentation
             Dgv_Listado.Columns[0].Width = 100;
             Dgv_Listado.Columns[0].HeaderText = "Código";
             Dgv_Listado.Columns[1].Width = 350;
-            Dgv_Listado.Columns[1].HeaderText = "Punto de venta";
+            Dgv_Listado.Columns[1].HeaderText = "Fmilia";
         }
 
         private async void Listado_pv(string cTexto)
         {
             try
             {
-                Dgv_Listado.DataSource = await _puntoVentaService.ListPuntoVentas(cTexto);
+                Dgv_Listado.DataSource = await _familiaService.ListFamilias(cTexto);
                 Formato_pv();
                 Lbl_totalregistros.Text = $"Total registros: {Dgv_Listado.Rows.Count}";
             }
@@ -72,19 +72,19 @@ namespace SPV.Presentation
 
         private void Selecciona_item()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(Dgv_Listado.CurrentRow.Cells["Codigo_pv"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(Dgv_Listado.CurrentRow.Cells["Codigo_fa"].Value)))
             {
                 MessageBox.Show("Selecciona un registro", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                nCodigo = Convert.ToInt32(Dgv_Listado.CurrentRow.Cells["Codigo_pv"].Value);
-                Txt_descripcion.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["Descripcion_pv"].Value);
+                nCodigo = Convert.ToInt32(Dgv_Listado.CurrentRow.Cells["Codigo_fa"].Value);
+                Txt_descripcion.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["Descripcion_fa"].Value);
             }
         }
         #endregion
 
-        private void Frm_Punto_Venta_Load(object sender, EventArgs e)
+        private void Frm_Familias_Load(object sender, EventArgs e)
         {
             Listado_pv("%");
         }
@@ -124,12 +124,12 @@ namespace SPV.Presentation
                 }
                 else
                 {
-                    PuntoVenta puntoVenta = new PuntoVenta()
+                    Familia familia = new Familia()
                     {
-                        Codigo_pv = nCodigo,
-                        Descripcion_pv = Txt_descripcion.Text.Trim()
+                        Codigo_fa = nCodigo,
+                        Descripcion_fa = Txt_descripcion.Text.Trim()
                     };
-                    if (await _puntoVentaService.SavePuntoVenta(Estadoguarda, puntoVenta))
+                    if (await _familiaService.SaveFamilia(Estadoguarda, familia))
                     {
                         MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpia_Texto();
@@ -192,7 +192,7 @@ namespace SPV.Presentation
             if (Opcion == DialogResult.Yes)
             {
                 Selecciona_item();
-                if (await _puntoVentaService.DeletePuntoVenta(nCodigo))
+                if (await _familiaService.DeleteFamilia(nCodigo))
                 {
                     Listado_pv("%");
                     MessageBox.Show("El registro ha sido eliminado", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -217,9 +217,9 @@ namespace SPV.Presentation
                 MessageBox.Show("No hay registros para hacer reportes", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            Frm_Rpt_Punto_Venta oRpt_pv = new Frm_Rpt_Punto_Venta();
-            oRpt_pv.Txt_p1.Text = Txt_buscar.Text.Trim();
-            oRpt_pv.ShowDialog();
+            Frm_Rpt_Familias oRpt_fa = new Frm_Rpt_Familias();
+            oRpt_fa.Txt_p1.Text = Txt_buscar.Text.Trim();
+            oRpt_fa.ShowDialog();
         }
 
         private void Btn_salir_Click(object sender, EventArgs e)

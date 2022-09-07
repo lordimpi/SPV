@@ -27,7 +27,7 @@ namespace SPV.DataAccess.Repositories.Implementations
                 sqlCommand.Transaction = sqlTransaction;
                 sqlCommand.Parameters.Clear();
                 sqlCommand.Parameters.Add("nOpcion", SqlDbType.Int).Value = opcion;
-                sqlCommand.Parameters.Add("nCodigo", SqlDbType.Int).Value = puntoVenta.Codigo_Pv;
+                sqlCommand.Parameters.Add("nCodigo", SqlDbType.Int).Value = puntoVenta.Codigo_pv;
                 sqlCommand.Parameters.Add("cDescripcion", SqlDbType.VarChar).Value = puntoVenta.Descripcion_pv;
                 //guarda lo que trae la consulta
                 await sqlCommand.ExecuteNonQueryAsync();
@@ -79,7 +79,7 @@ namespace SPV.DataAccess.Repositories.Implementations
                 {
                     sqlTransaction.Rollback();
                 }
-                throw new Exception($"Se produjo un error al guardas el punto de venta: {ex.Message}");
+                throw new Exception($"Se produjo un error al borrar el punto de venta: {ex.Message}");
             }
             finally
             {
@@ -90,7 +90,7 @@ namespace SPV.DataAccess.Repositories.Implementations
             return result;
         }
 
-        public async Task<ICollection<PuntoVenta>> List(string texto)
+        public async Task<ICollection<PuntoVenta>> ListPuntoVentas(string texto)
         {
             List<PuntoVenta> puntoVentas = new List<PuntoVenta>();
             PuntoVenta puntoVenta = null;
@@ -116,7 +116,7 @@ namespace SPV.DataAccess.Repositories.Implementations
                 {
                     puntoVenta = new PuntoVenta()
                     {
-                        Codigo_Pv = Convert.ToInt32(sqlDataReader["codigo_pv"]),
+                        Codigo_pv = Convert.ToInt32(sqlDataReader["codigo_pv"]),
                         Descripcion_pv = sqlDataReader["descripcion_pv"].ToString(),
                     };
                     puntoVentas.Add(puntoVenta);

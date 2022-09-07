@@ -20,9 +20,9 @@ namespace SPV.Infrastructure.Services.Implementations
             return await _repository.DeletePuntoVenta(id);
         }
 
-        public async Task<ICollection<PuntoVenta>> List(string texto)
+        public async Task<ICollection<PuntoVenta>> ListPuntoVentas(string texto)
         {
-            return await _repository.List(texto);
+            return await _repository.ListPuntoVentas(texto);
         }
 
         public async Task<bool> SavePuntoVenta(int opcion, PuntoVenta puntoVenta)

@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using SPV.DataAcces.Repositories.Contracts;
+using SPV.DataAcces.Repositories.Implementations;
 using SPV.DataAccess.Repositories.Contracts;
 using SPV.DataAccess.Repositories.Implementations;
 using SPV.Infrastructure.Services.Contracts;
@@ -24,7 +26,8 @@ namespace SPV.Presentation
 
             using (var serviceProvider = services.BuildServiceProvider())
             {
-                var FrmPuntoVenta = serviceProvider.GetRequiredService<Frm_Punto_Venta>();
+                //var FrmPuntoVenta = serviceProvider.GetRequiredService<Frm_Punto_Venta>();
+                var FrmPuntoVenta = serviceProvider.GetRequiredService<Frm_Familias>();
                 Application.Run(FrmPuntoVenta);
             };
         }
@@ -33,7 +36,10 @@ namespace SPV.Presentation
         {
             services.AddScoped<IPuntoVentaService, PuntoVentaService>()
                 .AddScoped<IPuntoVentaRepository, PuntoVentaRepository>()
-                .AddScoped<Frm_Punto_Venta>();
+                .AddScoped<IFamiliaRepository, FamiliaRepository>()
+                .AddScoped<IFamliaService, FamiliaService>()
+                .AddScoped<Frm_Punto_Venta>()
+                .AddScoped<Frm_Familias>();
         }
     }
 }

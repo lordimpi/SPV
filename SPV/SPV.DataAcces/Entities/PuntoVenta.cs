@@ -2,7 +2,7 @@
 {
     public class PuntoVenta
     {
-        public int Codigo_Pv { get; set; }
+        public int Codigo_pv { get; set; }
         public string Descripcion_pv { get; set; }
     }
 }

@@ -79,6 +79,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_Familias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Familias.Designer.cs">
+      <DependentUpon>Frm_Familias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Punto_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_DatosMaestros.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Frm_Rpt_Familias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Frm_Rpt_Familias.Designer.cs">
+      <DependentUpon>Frm_Rpt_Familias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Frm_Rpt_Punto_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,9 @@
       <DependentUpon>Frm_Rpt_Punto_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Frm_Familias.resx">
+      <DependentUpon>Frm_Familias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Punto_Venta.resx">
       <DependentUpon>Frm_Punto_Venta.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,9 +126,13 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reports\Frm_Rpt_Familias.resx">
+      <DependentUpon>Frm_Rpt_Familias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Frm_Rpt_Punto_Venta.resx">
       <DependentUpon>Frm_Rpt_Punto_Venta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Rpt_Familias.rdlc" />
     <EmbeddedResource Include="Reports\Rpt_Punto_Venta.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
