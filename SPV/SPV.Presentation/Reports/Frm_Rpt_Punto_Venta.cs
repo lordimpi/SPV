@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SPV.Presentation.Reports
@@ -19,8 +12,9 @@ namespace SPV.Presentation.Reports
 
         private void Frm_Rpt_Punto_Venta_Load(object sender, EventArgs e)
         {
-            this.uSP_Listado_pvTableAdapter.Fill(this.dataSet_DatosMaestros.USP_Listado_pv, 
-                                                 cTexto: Txt_p1.Text);
+            uSP_Listado_pvTableAdapter.Fill(dataSet_DatosMaestros.USP_Listado_pv, cTexto: Txt_p1.Text);
+            reportViewer1.RefreshReport();
+            //reportViewer2.RefreshReport();
             this.reportViewer1.RefreshReport();
         }
     }

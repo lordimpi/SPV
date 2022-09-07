@@ -1,5 +1,6 @@
 ﻿using SPV.DataAccess.Entities;
 using SPV.Infrastructure.Services.Contracts;
+using SPV.Presentation.Reports;
 using System;
 using System.Windows.Forms;
 
@@ -73,10 +74,7 @@ namespace SPV.Presentation
         {
             if (string.IsNullOrEmpty(Convert.ToString(Dgv_Listado.CurrentRow.Cells["Codigo_Pv"].Value)))
             {
-                MessageBox.Show("Selecciona un registro",
-                                "Aviso del Sistema",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
+                MessageBox.Show("Selecciona un registro", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -122,10 +120,7 @@ namespace SPV.Presentation
             {
                 if (Txt_descripcion.Text == string.Empty)
                 {
-                    MessageBox.Show("Falta ingresar datos requeridos (*)",
-                                    "Aviso del Sistema",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Falta ingresar datos requeridos (*)", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
                 {
@@ -136,10 +131,7 @@ namespace SPV.Presentation
                     };
                     if (await _puntoVentaService.SavePuntoVenta(Estadoguarda, puntoVenta))
                     {
-                        MessageBox.Show("Los datos han sido guardados correctamente",
-                                        "Aviso del Sistema",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Information);
+                        MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpia_Texto();
                         Estado_Texto(false);
                         Estado_BotonesPrincipales(true);
@@ -150,10 +142,7 @@ namespace SPV.Presentation
                     }
                     else
                     {
-                        MessageBox.Show("No se pudo guardar los datos",
-                                        "Aviso del Sistema",
-                                        MessageBoxButtons.OK,
-                                        MessageBoxIcon.Exclamation);
+                        MessageBox.Show("No se pudo guardar los datos", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
             }
@@ -223,12 +212,14 @@ namespace SPV.Presentation
 
         private void Btn_reporte_Click(object sender, EventArgs e)
         {
-            if (Dgv_Listado.Rows.Count > 0)
+            if (Dgv_Listado.Rows.Count == 0)
             {
-                //Reportes.Frm_Rpt_Punto_Venta oRpt_pv = new Reportes.Frm_Rpt_Punto_Venta();
-                //oRpt_pv.Txt_p1.Text = Txt_buscar.Text.Trim();
-                //oRpt_pv.ShowDialog();
+                MessageBox.Show("No hay registros para hacer reportes", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
+            Frm_Rpt_Punto_Venta oRpt_pv = new Frm_Rpt_Punto_Venta();
+            oRpt_pv.Txt_p1.Text = Txt_buscar.Text.Trim();
+            oRpt_pv.ShowDialog();
         }
 
         private void Btn_salir_Click(object sender, EventArgs e)
