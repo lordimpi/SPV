@@ -43,11 +43,14 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="Entities\Familia.cs" />
+    <Compile Include="Entities\Marca.cs" />
     <Compile Include="Entities\PuntoVenta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Contracts\IFamiliaRepository.cs" />
+    <Compile Include="Repositories\Contracts\IMarcaRepository.cs" />
     <Compile Include="Repositories\Contracts\IPuntoVentaRepository.cs" />
     <Compile Include="Repositories\Implementations\FamiliaRepository.cs" />
+    <Compile Include="Repositories\Implementations\MarcaRepository.cs" />
     <Compile Include="Repositories\Implementations\PuntoVentaRepository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

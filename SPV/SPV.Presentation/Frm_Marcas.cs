@@ -6,18 +6,19 @@ using System.Windows.Forms;
 
 namespace SPV.Presentation
 {
-    public partial class Frm_Familias : Form
+    public partial class Frm_Marcas : Form
     {
         #region "Variables"
         private int nCodigo = 0;
         private int Estadoguarda = 0;
-        private readonly IFamiliaService _familiaService;
+        private readonly IMarcaService _marcaService;
+
         #endregion
 
-        public Frm_Familias(IFamiliaService famliaService)
+        public Frm_Marcas(IMarcaService marcaService)
         {
             InitializeComponent();
-            _familiaService = famliaService;
+            this._marcaService = marcaService;
         }
 
         #region "Métodos"
@@ -26,14 +27,14 @@ namespace SPV.Presentation
             Dgv_Listado.Columns[0].Width = 100;
             Dgv_Listado.Columns[0].HeaderText = "Código";
             Dgv_Listado.Columns[1].Width = 350;
-            Dgv_Listado.Columns[1].HeaderText = "Familia";
+            Dgv_Listado.Columns[1].HeaderText = "Marca";
         }
 
         private async void Listado_pv(string cTexto)
         {
             try
             {
-                Dgv_Listado.DataSource = await _familiaService.ListFamilias(cTexto);
+                Dgv_Listado.DataSource = await _marcaService.ListMarcas(cTexto);
                 Formato_pv();
                 Lbl_totalregistros.Text = $"Total registros: {Dgv_Listado.Rows.Count}";
             }
@@ -72,19 +73,19 @@ namespace SPV.Presentation
 
         private void Selecciona_item()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(Dgv_Listado.CurrentRow.Cells["Codigo_fa"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(Dgv_Listado.CurrentRow.Cells["Codigo_ma"].Value)))
             {
                 MessageBox.Show("Selecciona un registro", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                nCodigo = Convert.ToInt32(Dgv_Listado.CurrentRow.Cells["Codigo_fa"].Value);
-                Txt_descripcion.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["Descripcion_fa"].Value);
+                nCodigo = Convert.ToInt32(Dgv_Listado.CurrentRow.Cells["Codigo_ma"].Value);
+                Txt_descripcion.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["Descripcion_ma"].Value);
             }
         }
         #endregion
 
-        private void Frm_Familias_Load(object sender, EventArgs e)
+        private void Frm_Marcas_Load(object sender, EventArgs e)
         {
             Listado_pv("%");
         }
@@ -124,12 +125,12 @@ namespace SPV.Presentation
                 }
                 else
                 {
-                    Familia familia = new Familia()
+                    Marca marca = new Marca()
                     {
-                        Codigo_fa = nCodigo,
-                        Descripcion_fa = Txt_descripcion.Text.Trim()
+                        Codigo_ma = nCodigo,
+                        Descripcion_ma = Txt_descripcion.Text.Trim()
                     };
-                    if (await _familiaService.SaveFamilia(Estadoguarda, familia))
+                    if (await _marcaService.SaveMarca(Estadoguarda, marca))
                     {
                         MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpia_Texto();
@@ -192,7 +193,7 @@ namespace SPV.Presentation
             if (Opcion == DialogResult.Yes)
             {
                 Selecciona_item();
-                if (await _familiaService.DeleteFamilia(nCodigo))
+                if (await _marcaService.DeleteMarca(nCodigo))
                 {
                     Listado_pv("%");
                     MessageBox.Show("El registro ha sido eliminado", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -217,9 +218,9 @@ namespace SPV.Presentation
                 MessageBox.Show("No hay registros para hacer reportes", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            Frm_Rpt_Familias oRpt_fa = new Frm_Rpt_Familias();
-            oRpt_fa.Txt_p1.Text = Txt_buscar.Text.Trim();
-            oRpt_fa.ShowDialog();
+            Frm_Rpt_Marcas oRpt_ma = new Frm_Rpt_Marcas();
+            oRpt_ma.Txt_p1.Text = Txt_buscar.Text.Trim();
+            oRpt_ma.ShowDialog();
         }
 
         private void Btn_salir_Click(object sender, EventArgs e)

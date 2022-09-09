@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SPV.Infrastructure.Services.Implementations
 {
-    public class FamiliaService : IFamliaService
+    public class FamiliaService : IFamiliaService
     {
         private readonly IFamiliaRepository _repository;
 

@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace SPV.Infrastructure.Services.Contracts
 {
-    public interface IFamliaService
+    public interface IFamiliaService
     {
         Task<ICollection<Familia>> ListFamilias(string texto);
         Task<bool> SaveFamilia(int opcion, Familia familia);
