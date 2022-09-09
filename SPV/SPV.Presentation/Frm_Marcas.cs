@@ -30,7 +30,7 @@ namespace SPV.Presentation
             Dgv_Listado.Columns[1].HeaderText = "Marca";
         }
 
-        private async void Listado_pv(string cTexto)
+        private async void Listado_ma(string cTexto)
         {
             try
             {
@@ -87,7 +87,7 @@ namespace SPV.Presentation
 
         private void Frm_Marcas_Load(object sender, EventArgs e)
         {
-            Listado_pv("%");
+            Listado_ma("%");
         }
 
         private void Btn_nuevo_Click(object sender, EventArgs e)
@@ -138,7 +138,7 @@ namespace SPV.Presentation
                         Estado_BotonesPrincipales(true);
                         Estado_BotonesProcesos(false);
                         Estadoguarda = 0;
-                        Listado_pv("%");
+                        Listado_ma("%");
                         Tbc_principal.SelectedIndex = 0;
                     }
                     else
@@ -195,7 +195,7 @@ namespace SPV.Presentation
                 Selecciona_item();
                 if (await _marcaService.DeleteMarca(nCodigo))
                 {
-                    Listado_pv("%");
+                    Listado_ma("%");
                     MessageBox.Show("El registro ha sido eliminado", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
@@ -208,7 +208,7 @@ namespace SPV.Presentation
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            Listado_pv(Txt_buscar.Text.Trim());
+            Listado_ma(Txt_buscar.Text.Trim());
         }
 
         private void Btn_reporte_Click(object sender, EventArgs e)

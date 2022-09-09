@@ -45,9 +45,11 @@
     <Compile Include="Services\Contracts\IFamiliaService.cs" />
     <Compile Include="Services\Contracts\IMarcaService.cs" />
     <Compile Include="Services\Contracts\IPuntoVentaService.cs" />
+    <Compile Include="Services\Contracts\IUnidadesMedidaService.cs" />
     <Compile Include="Services\Implementations\FamiliaService.cs" />
     <Compile Include="Services\Implementations\MarcaService.cs" />
     <Compile Include="Services\Implementations\PuntoVentaService.cs" />
+    <Compile Include="Services\Implementations\UnidadesMedidaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SPV.DataAcces\SPV.DataAcces.csproj">

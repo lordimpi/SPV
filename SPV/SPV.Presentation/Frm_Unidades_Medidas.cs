@@ -6,18 +6,19 @@ using System.Windows.Forms;
 
 namespace SPV.Presentation
 {
-    public partial class Frm_Familias : Form
+    public partial class Frm_Unidades_Medidas : Form
     {
         #region "Variables"
         private int nCodigo = 0;
         private int Estadoguarda = 0;
-        private readonly IFamiliaService _familiaService;
+        private readonly IUnidadesMedidaService _unidadesMedidaService;
+
         #endregion
 
-        public Frm_Familias(IFamiliaService famliaService)
+        public Frm_Unidades_Medidas(IUnidadesMedidaService unidadesMedidaService)
         {
             InitializeComponent();
-            _familiaService = famliaService;
+            this._unidadesMedidaService = unidadesMedidaService;
         }
 
         #region "Métodos"
@@ -26,14 +27,14 @@ namespace SPV.Presentation
             Dgv_Listado.Columns[0].Width = 100;
             Dgv_Listado.Columns[0].HeaderText = "Código";
             Dgv_Listado.Columns[1].Width = 350;
-            Dgv_Listado.Columns[1].HeaderText = "Familia";
+            Dgv_Listado.Columns[1].HeaderText = "Unidades Medida";
         }
 
-        private async void Listado_fa(string cTexto)
+        private async void Listado_um(string cTexto)
         {
             try
             {
-                Dgv_Listado.DataSource = await _familiaService.ListFamilias(cTexto);
+                Dgv_Listado.DataSource = await _unidadesMedidaService.ListUnidadesMedida(cTexto);
                 Formato_pv();
                 Lbl_totalregistros.Text = $"Total registros: {Dgv_Listado.Rows.Count}";
             }
@@ -72,21 +73,21 @@ namespace SPV.Presentation
 
         private void Selecciona_item()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(Dgv_Listado.CurrentRow.Cells["Codigo_fa"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(Dgv_Listado.CurrentRow.Cells["Codigo_um"].Value)))
             {
                 MessageBox.Show("Selecciona un registro", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
-                nCodigo = Convert.ToInt32(Dgv_Listado.CurrentRow.Cells["Codigo_fa"].Value);
-                Txt_descripcion.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["Descripcion_fa"].Value);
+                nCodigo = Convert.ToInt32(Dgv_Listado.CurrentRow.Cells["Codigo_um"].Value);
+                Txt_descripcion.Text = Convert.ToString(Dgv_Listado.CurrentRow.Cells["Descripcion_um"].Value);
             }
         }
         #endregion
 
-        private void Frm_Familias_Load(object sender, EventArgs e)
+        private void Frm_Unidades_Medidas_Load(object sender, EventArgs e)
         {
-            Listado_fa("%");
+            Listado_um("%");
         }
 
         private void Btn_nuevo_Click(object sender, EventArgs e)
@@ -124,12 +125,12 @@ namespace SPV.Presentation
                 }
                 else
                 {
-                    Familia familia = new Familia()
+                    UnidadesMedida unidadesMedida = new UnidadesMedida()
                     {
-                        Codigo_fa = nCodigo,
-                        Descripcion_fa = Txt_descripcion.Text.Trim()
+                        Codigo_um = nCodigo,
+                        Descripcion_um = Txt_descripcion.Text.Trim()
                     };
-                    if (await _familiaService.SaveFamilia(Estadoguarda, familia))
+                    if (await _unidadesMedidaService.SaveUnidadMedida(Estadoguarda, unidadesMedida))
                     {
                         MessageBox.Show("Los datos han sido guardados correctamente", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Limpia_Texto();
@@ -137,7 +138,7 @@ namespace SPV.Presentation
                         Estado_BotonesPrincipales(true);
                         Estado_BotonesProcesos(false);
                         Estadoguarda = 0;
-                        Listado_fa("%");
+                        Listado_um("%");
                         Tbc_principal.SelectedIndex = 0;
                     }
                     else
@@ -192,9 +193,9 @@ namespace SPV.Presentation
             if (Opcion == DialogResult.Yes)
             {
                 Selecciona_item();
-                if (await _familiaService.DeleteFamilia(nCodigo))
+                if (await _unidadesMedidaService.DeleteUnidadMedida(nCodigo))
                 {
-                    Listado_fa("%");
+                    Listado_um("%");
                     MessageBox.Show("El registro ha sido eliminado", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
@@ -207,7 +208,7 @@ namespace SPV.Presentation
 
         private void Btn_buscar_Click(object sender, EventArgs e)
         {
-            Listado_fa(Txt_buscar.Text.Trim());
+            Listado_um(Txt_buscar.Text.Trim());
         }
 
         private void Btn_reporte_Click(object sender, EventArgs e)
@@ -217,9 +218,9 @@ namespace SPV.Presentation
                 MessageBox.Show("No hay registros para hacer reportes", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            Frm_Rpt_Familias oRpt_fa = new Frm_Rpt_Familias();
-            oRpt_fa.Txt_p1.Text = Txt_buscar.Text.Trim();
-            oRpt_fa.ShowDialog();
+            Frm_Rpt_Unidades_Medidas oRpt_um = new Frm_Rpt_Unidades_Medidas();
+            oRpt_um.Txt_p1.Text = Txt_buscar.Text.Trim();
+            oRpt_um.ShowDialog();
         }
 
         private void Btn_salir_Click(object sender, EventArgs e)
