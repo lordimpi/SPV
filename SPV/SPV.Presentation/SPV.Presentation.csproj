@@ -79,6 +79,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_SubFamilias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_SubFamilias.Designer.cs">
+      <DependentUpon>Frm_SubFamilias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Unidades_Medidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,12 @@
     <Compile Include="Reports\Frm_Rpt_Punto_Venta.Designer.cs">
       <DependentUpon>Frm_Rpt_Punto_Venta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\Frm_Rpt_SubFamilias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Frm_Rpt_SubFamilias.Designer.cs">
+      <DependentUpon>Frm_Rpt_SubFamilias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Frm_Rpt_Unidades_Medidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +147,9 @@
       <DependentUpon>Frm_Rpt_Unidades_Medidas.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Frm_SubFamilias.resx">
+      <DependentUpon>Frm_SubFamilias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Unidades_Medidas.resx">
       <DependentUpon>Frm_Unidades_Medidas.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,12 +180,16 @@
     <EmbeddedResource Include="Reports\Frm_Rpt_Punto_Venta.resx">
       <DependentUpon>Frm_Rpt_Punto_Venta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Frm_Rpt_SubFamilias.resx">
+      <DependentUpon>Frm_Rpt_SubFamilias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Frm_Rpt_Unidades_Medidas.resx">
       <DependentUpon>Frm_Rpt_Unidades_Medidas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Rpt_Familias.rdlc" />
     <EmbeddedResource Include="Reports\Rpt_Marcas.rdlc" />
     <EmbeddedResource Include="Reports\Rpt_Punto_Venta.rdlc" />
+    <EmbeddedResource Include="Reports\Rpt_SubFamilias.rdlc" />
     <EmbeddedResource Include="Reports\Rpt_Unidades_Medidas.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -21,7 +21,7 @@ namespace SPV.Presentation
         }
 
         #region "Métodos"
-        private void Formato_pv()
+        private void Formato_fa()
         {
             Dgv_Listado.Columns[0].Width = 100;
             Dgv_Listado.Columns[0].HeaderText = "Código";
@@ -34,7 +34,7 @@ namespace SPV.Presentation
             try
             {
                 Dgv_Listado.DataSource = await _familiaService.ListFamilias(cTexto);
-                Formato_pv();
+                Formato_fa();
                 Lbl_totalregistros.Text = $"Total registros: {Dgv_Listado.Rows.Count}";
             }
             catch (Exception ex)
