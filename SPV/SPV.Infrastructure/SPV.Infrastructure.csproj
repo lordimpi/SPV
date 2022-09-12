@@ -44,11 +44,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Contracts\IFamiliaService.cs" />
     <Compile Include="Services\Contracts\IMarcaService.cs" />
+    <Compile Include="Services\Contracts\IMesaService.cs" />
     <Compile Include="Services\Contracts\IPuntoVentaService.cs" />
     <Compile Include="Services\Contracts\ISubFamiliaService.cs" />
     <Compile Include="Services\Contracts\IUnidadesMedidaService.cs" />
     <Compile Include="Services\Implementations\FamiliaService.cs" />
     <Compile Include="Services\Implementations\MarcaService.cs" />
+    <Compile Include="Services\Implementations\MesaService.cs" />
     <Compile Include="Services\Implementations\PuntoVentaService.cs" />
     <Compile Include="Services\Implementations\SubFamiliaService.cs" />
     <Compile Include="Services\Implementations\UnidadesMedidaService.cs" />

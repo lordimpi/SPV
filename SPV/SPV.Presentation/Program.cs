@@ -27,7 +27,7 @@ namespace SPV.Presentation
             using (var serviceProvider = services.BuildServiceProvider())
             {
                 //var FrmPuntoVenta = serviceProvider.GetRequiredService<Frm_Punto_Venta>();
-                var FrmPuntoVenta = serviceProvider.GetRequiredService<Frm_SubFamilias>();
+                var FrmPuntoVenta = serviceProvider.GetRequiredService<Frm_Mesas>();
                 Application.Run(FrmPuntoVenta);
             };
         }
@@ -44,11 +44,14 @@ namespace SPV.Presentation
                 .AddScoped<IUnidadesMedidaService, UnidadesMedidaService>()
                 .AddScoped<ISubFamiliaRepository, SubFamiliaRepository>()
                 .AddScoped<ISubFamiliaService, SubFamiliaService>()
+                .AddScoped<IMesaRepository,MesaRepository>()
+                .AddScoped<IMesaService,MesaService>()
                 .AddScoped<Frm_Punto_Venta>()
                 .AddScoped<Frm_Familias>()
                 .AddScoped<Frm_Marcas>()
                 .AddScoped<Frm_Unidades_Medidas>()
-                .AddScoped<Frm_SubFamilias>();
+                .AddScoped<Frm_SubFamilias>()
+                .AddScoped<Frm_Mesas>();
         }
     }
 }
