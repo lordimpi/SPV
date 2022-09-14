@@ -135,7 +135,7 @@
             this.Tbc_principal.Controls.Add(this.tabPage2);
             this.Tbc_principal.ItemSize = new System.Drawing.Size(100, 30);
             this.Tbc_principal.Location = new System.Drawing.Point(16, 64);
-            this.Tbc_principal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Tbc_principal.Margin = new System.Windows.Forms.Padding(4);
             this.Tbc_principal.Name = "Tbc_principal";
             this.Tbc_principal.SelectedIndex = 0;
             this.Tbc_principal.Size = new System.Drawing.Size(1416, 441);
@@ -149,9 +149,9 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.Dgv_Listado);
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage1.Size = new System.Drawing.Size(1408, 403);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Consultas";
@@ -176,7 +176,7 @@
             this.Btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_buscar.ForeColor = System.Drawing.Color.White;
             this.Btn_buscar.Location = new System.Drawing.Point(393, 43);
-            this.Btn_buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_buscar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_buscar.Name = "Btn_buscar";
             this.Btn_buscar.Size = new System.Drawing.Size(107, 33);
             this.Btn_buscar.TabIndex = 3;
@@ -187,7 +187,7 @@
             // Txt_buscar
             // 
             this.Txt_buscar.Location = new System.Drawing.Point(84, 47);
-            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_buscar.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_buscar.Name = "Txt_buscar";
             this.Txt_buscar.Size = new System.Drawing.Size(300, 22);
             this.Txt_buscar.TabIndex = 2;
@@ -210,6 +210,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightCyan;
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             this.Dgv_Listado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Dgv_Listado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.Dgv_Listado.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Dgv_Listado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -224,7 +225,7 @@
             this.Dgv_Listado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_Listado.EnableHeadersVisualStyles = false;
             this.Dgv_Listado.Location = new System.Drawing.Point(20, 84);
-            this.Dgv_Listado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dgv_Listado.Margin = new System.Windows.Forms.Padding(4);
             this.Dgv_Listado.Name = "Dgv_Listado";
             this.Dgv_Listado.ReadOnly = true;
             this.Dgv_Listado.RowHeadersWidth = 51;
@@ -263,9 +264,9 @@
             this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Location = new System.Drawing.Point(4, 34);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(1408, 403);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mantenimiento";
@@ -281,7 +282,7 @@
             this.Pnl_Listado_4.Controls.Add(this.Txt_buscar4);
             this.Pnl_Listado_4.Controls.Add(this.label17);
             this.Pnl_Listado_4.Location = new System.Drawing.Point(519, 345);
-            this.Pnl_Listado_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pnl_Listado_4.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_Listado_4.Name = "Pnl_Listado_4";
             this.Pnl_Listado_4.Size = new System.Drawing.Size(411, 252);
             this.Pnl_Listado_4.TabIndex = 28;
@@ -293,7 +294,7 @@
             this.Btn_retornar4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_retornar4.Image = ((System.Drawing.Image)(resources.GetObject("Btn_retornar4.Image")));
             this.Btn_retornar4.Location = new System.Drawing.Point(349, 34);
-            this.Btn_retornar4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_retornar4.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_retornar4.Name = "Btn_retornar4";
             this.Btn_retornar4.Size = new System.Drawing.Size(39, 33);
             this.Btn_retornar4.TabIndex = 13;
@@ -322,7 +323,7 @@
             this.Dgv_4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_4.EnableHeadersVisualStyles = false;
             this.Dgv_4.Location = new System.Drawing.Point(23, 86);
-            this.Dgv_4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dgv_4.Margin = new System.Windows.Forms.Padding(4);
             this.Dgv_4.Name = "Dgv_4";
             this.Dgv_4.ReadOnly = true;
             this.Dgv_4.RowHeadersWidth = 51;
@@ -348,7 +349,7 @@
             this.Btn_buscar4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_buscar4.Image = ((System.Drawing.Image)(resources.GetObject("Btn_buscar4.Image")));
             this.Btn_buscar4.Location = new System.Drawing.Point(303, 36);
-            this.Btn_buscar4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_buscar4.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_buscar4.Name = "Btn_buscar4";
             this.Btn_buscar4.Size = new System.Drawing.Size(39, 33);
             this.Btn_buscar4.TabIndex = 10;
@@ -358,7 +359,7 @@
             // Txt_buscar4
             // 
             this.Txt_buscar4.Location = new System.Drawing.Point(84, 41);
-            this.Txt_buscar4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_buscar4.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_buscar4.Name = "Txt_buscar4";
             this.Txt_buscar4.Size = new System.Drawing.Size(209, 22);
             this.Txt_buscar4.TabIndex = 1;
@@ -383,7 +384,7 @@
             this.Pnl_Listado_3.Controls.Add(this.Txt_buscar3);
             this.Pnl_Listado_3.Controls.Add(this.label15);
             this.Pnl_Listado_3.Location = new System.Drawing.Point(1356, 28);
-            this.Pnl_Listado_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pnl_Listado_3.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_Listado_3.Name = "Pnl_Listado_3";
             this.Pnl_Listado_3.Size = new System.Drawing.Size(708, 286);
             this.Pnl_Listado_3.TabIndex = 27;
@@ -395,7 +396,7 @@
             this.Btn_retornar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_retornar3.Image = ((System.Drawing.Image)(resources.GetObject("Btn_retornar3.Image")));
             this.Btn_retornar3.Location = new System.Drawing.Point(349, 34);
-            this.Btn_retornar3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_retornar3.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_retornar3.Name = "Btn_retornar3";
             this.Btn_retornar3.Size = new System.Drawing.Size(39, 33);
             this.Btn_retornar3.TabIndex = 13;
@@ -424,7 +425,7 @@
             this.Dgv_3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_3.EnableHeadersVisualStyles = false;
             this.Dgv_3.Location = new System.Drawing.Point(23, 86);
-            this.Dgv_3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dgv_3.Margin = new System.Windows.Forms.Padding(4);
             this.Dgv_3.Name = "Dgv_3";
             this.Dgv_3.ReadOnly = true;
             this.Dgv_3.RowHeadersWidth = 51;
@@ -450,7 +451,7 @@
             this.Btn_buscar3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_buscar3.Image = ((System.Drawing.Image)(resources.GetObject("Btn_buscar3.Image")));
             this.Btn_buscar3.Location = new System.Drawing.Point(303, 36);
-            this.Btn_buscar3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_buscar3.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_buscar3.Name = "Btn_buscar3";
             this.Btn_buscar3.Size = new System.Drawing.Size(39, 33);
             this.Btn_buscar3.TabIndex = 10;
@@ -460,7 +461,7 @@
             // Txt_buscar3
             // 
             this.Txt_buscar3.Location = new System.Drawing.Point(84, 41);
-            this.Txt_buscar3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_buscar3.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_buscar3.Name = "Txt_buscar3";
             this.Txt_buscar3.Size = new System.Drawing.Size(209, 22);
             this.Txt_buscar3.TabIndex = 1;
@@ -485,7 +486,7 @@
             this.Pnl_Listado_2.Controls.Add(this.Txt_buscar2);
             this.Pnl_Listado_2.Controls.Add(this.label13);
             this.Pnl_Listado_2.Location = new System.Drawing.Point(937, 345);
-            this.Pnl_Listado_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pnl_Listado_2.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_Listado_2.Name = "Pnl_Listado_2";
             this.Pnl_Listado_2.Size = new System.Drawing.Size(411, 286);
             this.Pnl_Listado_2.TabIndex = 26;
@@ -497,7 +498,7 @@
             this.Btn_retornar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_retornar2.Image = ((System.Drawing.Image)(resources.GetObject("Btn_retornar2.Image")));
             this.Btn_retornar2.Location = new System.Drawing.Point(349, 34);
-            this.Btn_retornar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_retornar2.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_retornar2.Name = "Btn_retornar2";
             this.Btn_retornar2.Size = new System.Drawing.Size(39, 33);
             this.Btn_retornar2.TabIndex = 13;
@@ -526,7 +527,7 @@
             this.Dgv_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_2.EnableHeadersVisualStyles = false;
             this.Dgv_2.Location = new System.Drawing.Point(23, 86);
-            this.Dgv_2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dgv_2.Margin = new System.Windows.Forms.Padding(4);
             this.Dgv_2.Name = "Dgv_2";
             this.Dgv_2.ReadOnly = true;
             this.Dgv_2.RowHeadersWidth = 51;
@@ -552,7 +553,7 @@
             this.Btn_buscar2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_buscar2.Image = ((System.Drawing.Image)(resources.GetObject("Btn_buscar2.Image")));
             this.Btn_buscar2.Location = new System.Drawing.Point(303, 36);
-            this.Btn_buscar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_buscar2.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_buscar2.Name = "Btn_buscar2";
             this.Btn_buscar2.Size = new System.Drawing.Size(39, 33);
             this.Btn_buscar2.TabIndex = 10;
@@ -562,7 +563,7 @@
             // Txt_buscar2
             // 
             this.Txt_buscar2.Location = new System.Drawing.Point(84, 41);
-            this.Txt_buscar2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_buscar2.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_buscar2.Name = "Txt_buscar2";
             this.Txt_buscar2.Size = new System.Drawing.Size(209, 22);
             this.Txt_buscar2.TabIndex = 1;
@@ -587,7 +588,7 @@
             this.Pnl_Listado_1.Controls.Add(this.Txt_buscar1);
             this.Pnl_Listado_1.Controls.Add(this.label5);
             this.Pnl_Listado_1.Location = new System.Drawing.Point(1356, 345);
-            this.Pnl_Listado_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pnl_Listado_1.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_Listado_1.Name = "Pnl_Listado_1";
             this.Pnl_Listado_1.Size = new System.Drawing.Size(411, 286);
             this.Pnl_Listado_1.TabIndex = 10;
@@ -599,7 +600,7 @@
             this.Btn_retornar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_retornar1.Image = ((System.Drawing.Image)(resources.GetObject("Btn_retornar1.Image")));
             this.Btn_retornar1.Location = new System.Drawing.Point(349, 34);
-            this.Btn_retornar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_retornar1.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_retornar1.Name = "Btn_retornar1";
             this.Btn_retornar1.Size = new System.Drawing.Size(39, 33);
             this.Btn_retornar1.TabIndex = 13;
@@ -628,7 +629,7 @@
             this.Dgv_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_1.EnableHeadersVisualStyles = false;
             this.Dgv_1.Location = new System.Drawing.Point(23, 86);
-            this.Dgv_1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dgv_1.Margin = new System.Windows.Forms.Padding(4);
             this.Dgv_1.Name = "Dgv_1";
             this.Dgv_1.ReadOnly = true;
             this.Dgv_1.RowHeadersWidth = 51;
@@ -654,7 +655,7 @@
             this.Btn_buscar1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_buscar1.Image = ((System.Drawing.Image)(resources.GetObject("Btn_buscar1.Image")));
             this.Btn_buscar1.Location = new System.Drawing.Point(303, 36);
-            this.Btn_buscar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_buscar1.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_buscar1.Name = "Btn_buscar1";
             this.Btn_buscar1.Size = new System.Drawing.Size(39, 33);
             this.Btn_buscar1.TabIndex = 10;
@@ -664,7 +665,7 @@
             // Txt_buscar1
             // 
             this.Txt_buscar1.Location = new System.Drawing.Point(84, 41);
-            this.Txt_buscar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_buscar1.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_buscar1.Name = "Txt_buscar1";
             this.Txt_buscar1.Size = new System.Drawing.Size(209, 22);
             this.Txt_buscar1.TabIndex = 1;
@@ -701,7 +702,7 @@
             this.Dgv_PuntosVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.Dgv_PuntosVentas.EnableHeadersVisualStyles = false;
             this.Dgv_PuntosVentas.Location = new System.Drawing.Point(827, 27);
-            this.Dgv_PuntosVentas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Dgv_PuntosVentas.Margin = new System.Windows.Forms.Padding(4);
             this.Dgv_PuntosVentas.Name = "Dgv_PuntosVentas";
             this.Dgv_PuntosVentas.RowHeadersWidth = 51;
             this.Dgv_PuntosVentas.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -711,7 +712,7 @@
             // Txt_observacion
             // 
             this.Txt_observacion.Location = new System.Drawing.Point(169, 294);
-            this.Txt_observacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_observacion.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_observacion.MaxLength = 30;
             this.Txt_observacion.Multiline = true;
             this.Txt_observacion.Name = "Txt_observacion";
@@ -735,7 +736,7 @@
             this.Btn_lupa_ad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_lupa_ad.Image = ((System.Drawing.Image)(resources.GetObject("Btn_lupa_ad.Image")));
             this.Btn_lupa_ad.Location = new System.Drawing.Point(475, 242);
-            this.Btn_lupa_ad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_lupa_ad.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_lupa_ad.Name = "Btn_lupa_ad";
             this.Btn_lupa_ad.Size = new System.Drawing.Size(39, 33);
             this.Btn_lupa_ad.TabIndex = 20;
@@ -746,7 +747,7 @@
             // Txt_descripcion_ad
             // 
             this.Txt_descripcion_ad.Location = new System.Drawing.Point(171, 247);
-            this.Txt_descripcion_ad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_descripcion_ad.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_descripcion_ad.Name = "Txt_descripcion_ad";
             this.Txt_descripcion_ad.ReadOnly = true;
             this.Txt_descripcion_ad.Size = new System.Drawing.Size(297, 22);
@@ -768,7 +769,7 @@
             this.Btn_lupa_um.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_lupa_um.Image = ((System.Drawing.Image)(resources.GetObject("Btn_lupa_um.Image")));
             this.Btn_lupa_um.Location = new System.Drawing.Point(477, 113);
-            this.Btn_lupa_um.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_lupa_um.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_lupa_um.Name = "Btn_lupa_um";
             this.Btn_lupa_um.Size = new System.Drawing.Size(39, 33);
             this.Btn_lupa_um.TabIndex = 17;
@@ -779,7 +780,7 @@
             // Txt_descripcion_um
             // 
             this.Txt_descripcion_um.Location = new System.Drawing.Point(172, 116);
-            this.Txt_descripcion_um.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_descripcion_um.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_descripcion_um.Name = "Txt_descripcion_um";
             this.Txt_descripcion_um.ReadOnly = true;
             this.Txt_descripcion_um.Size = new System.Drawing.Size(297, 22);
@@ -801,7 +802,7 @@
             this.Btn_lupa_ma.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_lupa_ma.Image = ((System.Drawing.Image)(resources.GetObject("Btn_lupa_ma.Image")));
             this.Btn_lupa_ma.Location = new System.Drawing.Point(477, 65);
-            this.Btn_lupa_ma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_lupa_ma.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_lupa_ma.Name = "Btn_lupa_ma";
             this.Btn_lupa_ma.Size = new System.Drawing.Size(39, 33);
             this.Btn_lupa_ma.TabIndex = 14;
@@ -812,7 +813,7 @@
             // Txt_descripcion_ma
             // 
             this.Txt_descripcion_ma.Location = new System.Drawing.Point(172, 68);
-            this.Txt_descripcion_ma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_descripcion_ma.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_descripcion_ma.Name = "Txt_descripcion_ma";
             this.Txt_descripcion_ma.ReadOnly = true;
             this.Txt_descripcion_ma.Size = new System.Drawing.Size(297, 22);
@@ -831,7 +832,7 @@
             // Txt_descripcion_pr
             // 
             this.Txt_descripcion_pr.Location = new System.Drawing.Point(172, 23);
-            this.Txt_descripcion_pr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_descripcion_pr.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_descripcion_pr.MaxLength = 30;
             this.Txt_descripcion_pr.Name = "Txt_descripcion_pr";
             this.Txt_descripcion_pr.ReadOnly = true;
@@ -854,7 +855,7 @@
             this.Btn_lupa_sf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_lupa_sf.Image = ((System.Drawing.Image)(resources.GetObject("Btn_lupa_sf.Image")));
             this.Btn_lupa_sf.Location = new System.Drawing.Point(476, 154);
-            this.Btn_lupa_sf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_lupa_sf.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_lupa_sf.Name = "Btn_lupa_sf";
             this.Btn_lupa_sf.Size = new System.Drawing.Size(39, 33);
             this.Btn_lupa_sf.TabIndex = 2;
@@ -865,7 +866,7 @@
             // Txt_descripcion_sf
             // 
             this.Txt_descripcion_sf.Location = new System.Drawing.Point(172, 159);
-            this.Txt_descripcion_sf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_descripcion_sf.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_descripcion_sf.Name = "Txt_descripcion_sf";
             this.Txt_descripcion_sf.ReadOnly = true;
             this.Txt_descripcion_sf.Size = new System.Drawing.Size(297, 22);
@@ -887,7 +888,7 @@
             this.Btn_retornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_retornar.ForeColor = System.Drawing.Color.White;
             this.Btn_retornar.Location = new System.Drawing.Point(363, 345);
-            this.Btn_retornar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_retornar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_retornar.Name = "Btn_retornar";
             this.Btn_retornar.Size = new System.Drawing.Size(107, 33);
             this.Btn_retornar.TabIndex = 6;
@@ -902,7 +903,7 @@
             this.Btn_guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_guardar.ForeColor = System.Drawing.Color.White;
             this.Btn_guardar.Location = new System.Drawing.Point(248, 345);
-            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_guardar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_guardar.Name = "Btn_guardar";
             this.Btn_guardar.Size = new System.Drawing.Size(107, 33);
             this.Btn_guardar.TabIndex = 5;
@@ -917,7 +918,7 @@
             this.Btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_cancelar.ForeColor = System.Drawing.Color.White;
             this.Btn_cancelar.Location = new System.Drawing.Point(133, 345);
-            this.Btn_cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_cancelar.Name = "Btn_cancelar";
             this.Btn_cancelar.Size = new System.Drawing.Size(107, 33);
             this.Btn_cancelar.TabIndex = 4;
@@ -929,7 +930,7 @@
             // Txt_precio_unitario
             // 
             this.Txt_precio_unitario.Location = new System.Drawing.Point(172, 202);
-            this.Txt_precio_unitario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_precio_unitario.Margin = new System.Windows.Forms.Padding(4);
             this.Txt_precio_unitario.MaxLength = 30;
             this.Txt_precio_unitario.Name = "Txt_precio_unitario";
             this.Txt_precio_unitario.ReadOnly = true;
@@ -951,9 +952,9 @@
             this.groupBox1.Controls.Add(this.Btn_agregar_imagen);
             this.groupBox1.Controls.Add(this.Pct_imagen);
             this.groupBox1.Location = new System.Drawing.Point(552, 23);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(267, 282);
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
@@ -965,7 +966,7 @@
             this.Btn_agregar_imagen.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
             this.Btn_agregar_imagen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_agregar_imagen.Location = new System.Drawing.Point(32, 210);
-            this.Btn_agregar_imagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_agregar_imagen.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_agregar_imagen.Name = "Btn_agregar_imagen";
             this.Btn_agregar_imagen.Size = new System.Drawing.Size(195, 33);
             this.Btn_agregar_imagen.TabIndex = 23;
@@ -978,7 +979,7 @@
             // 
             this.Pct_imagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Pct_imagen.Location = new System.Drawing.Point(32, 23);
-            this.Pct_imagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pct_imagen.Margin = new System.Windows.Forms.Padding(4);
             this.Pct_imagen.Name = "Pct_imagen";
             this.Pct_imagen.Size = new System.Drawing.Size(194, 179);
             this.Pct_imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -993,7 +994,7 @@
             this.Btn_nuevo.ImageKey = "new.png";
             this.Btn_nuevo.ImageList = this.imageList1;
             this.Btn_nuevo.Location = new System.Drawing.Point(21, 512);
-            this.Btn_nuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_nuevo.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_nuevo.Name = "Btn_nuevo";
             this.Btn_nuevo.Size = new System.Drawing.Size(100, 74);
             this.Btn_nuevo.TabIndex = 1;
@@ -1021,7 +1022,7 @@
             this.Btn_actualizar.ImageKey = "edit.png";
             this.Btn_actualizar.ImageList = this.imageList1;
             this.Btn_actualizar.Location = new System.Drawing.Point(129, 512);
-            this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_actualizar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_actualizar.Name = "Btn_actualizar";
             this.Btn_actualizar.Size = new System.Drawing.Size(100, 74);
             this.Btn_actualizar.TabIndex = 2;
@@ -1039,7 +1040,7 @@
             this.Btn_eliminar.ImageKey = "delete.png";
             this.Btn_eliminar.ImageList = this.imageList1;
             this.Btn_eliminar.Location = new System.Drawing.Point(237, 512);
-            this.Btn_eliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_eliminar.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_eliminar.Name = "Btn_eliminar";
             this.Btn_eliminar.Size = new System.Drawing.Size(100, 74);
             this.Btn_eliminar.TabIndex = 3;
@@ -1057,7 +1058,7 @@
             this.Btn_reporte.ImageKey = "report.png";
             this.Btn_reporte.ImageList = this.imageList1;
             this.Btn_reporte.Location = new System.Drawing.Point(345, 512);
-            this.Btn_reporte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_reporte.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_reporte.Name = "Btn_reporte";
             this.Btn_reporte.Size = new System.Drawing.Size(100, 74);
             this.Btn_reporte.TabIndex = 4;
@@ -1075,7 +1076,7 @@
             this.Btn_salir.ImageKey = "log-out.png";
             this.Btn_salir.ImageList = this.imageList1;
             this.Btn_salir.Location = new System.Drawing.Point(453, 512);
-            this.Btn_salir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Btn_salir.Margin = new System.Windows.Forms.Padding(4);
             this.Btn_salir.Name = "Btn_salir";
             this.Btn_salir.Size = new System.Drawing.Size(100, 74);
             this.Btn_salir.TabIndex = 5;
@@ -1091,7 +1092,7 @@
             this.Pnl_titulo_form.Controls.Add(this.label3);
             this.Pnl_titulo_form.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_titulo_form.Location = new System.Drawing.Point(0, 0);
-            this.Pnl_titulo_form.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Pnl_titulo_form.Margin = new System.Windows.Forms.Padding(4);
             this.Pnl_titulo_form.Name = "Pnl_titulo_form";
             this.Pnl_titulo_form.Size = new System.Drawing.Size(1448, 49);
             this.Pnl_titulo_form.TabIndex = 6;
@@ -1120,7 +1121,7 @@
             this.Controls.Add(this.Btn_actualizar);
             this.Controls.Add(this.Btn_nuevo);
             this.Controls.Add(this.Tbc_principal);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Productos";
