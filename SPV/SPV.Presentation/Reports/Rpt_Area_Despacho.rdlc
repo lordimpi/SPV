@@ -6,13 +6,13 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>1.52633cm</Width>
+              <Width>1.94127cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.05033cm</Width>
+              <Width>3.98167cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.54283cm</Width>
+              <Width>5.50567cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -64,7 +64,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>MESA</Value>
+                              <Value>ÁREA DESPACHO</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -100,7 +100,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>PUNTO DE VENTA</Value>
+                              <Value>IMPRESORA</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -134,14 +134,14 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="codigo_me">
+                    <Textbox Name="codigo_ad">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!codigo_me.Value</Value>
+                              <Value>=Fields!codigo_ad.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -152,7 +152,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>codigo_me</rd:DefaultName>
+                      <rd:DefaultName>codigo_ad</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -168,14 +168,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="descripcion_me">
+                    <Textbox Name="descripcion_ad">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!descripcion_me.Value</Value>
+                              <Value>=Fields!descripcion_ad.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -186,7 +186,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>descripcion_me</rd:DefaultName>
+                      <rd:DefaultName>descripcion_ad</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -202,14 +202,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="descripcion_pv">
+                    <Textbox Name="impresora">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!descripcion_pv.Value</Value>
+                              <Value>=Fields!impresora.Value</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -220,7 +220,7 @@
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>descripcion_pv</rd:DefaultName>
+                      <rd:DefaultName>impresora</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -256,10 +256,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.17639cm</Top>
-        <Left>6.0452cm</Left>
+        <Top>0.29339cm</Top>
+        <Left>5.24087cm</Left>
         <Height>1.2cm</Height>
-        <Width>11.11949cm</Width>
+        <Width>11.42861cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -267,7 +267,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.86733cm</Height>
+    <Height>1.6345cm</Height>
     <Style />
   </Body>
   <Width>21cm</Width>
@@ -286,7 +286,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Reporte Mesas de los Puntos de Vista</Value>
+                      <Value>Reporte Mesas Area de Despacho</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                       </Style>
@@ -365,7 +365,7 @@
             </Image>
           </ReportItems>
           <KeepTogether>true</KeepTogether>
-          <Top>0.23166cm</Top>
+          <Top>0.23167cm</Top>
           <Left>0.31767cm</Left>
           <Height>2.07667cm</Height>
           <Width>20.36467cm</Width>
@@ -383,7 +383,7 @@
       </Style>
     </PageHeader>
     <PageFooter>
-      <Height>1.35467cm</Height>
+      <Height>1.22767cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -407,7 +407,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox9</rd:DefaultName>
-          <Top>0.54667cm</Top>
+          <Top>0.462cm</Top>
           <Left>12.72134cm</Left>
           <Height>0.6cm</Height>
           <Width>7.961cm</Width>
@@ -444,7 +444,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>e5380997-1eab-4364-828f-a6bd28985591</rd:DataSourceID>
+      <rd:DataSourceID>2c83b73f-c62c-42a8-9471-03dc00a72a08</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -454,30 +454,26 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="codigo_me">
-          <DataField>codigo_me</DataField>
+        <Field Name="codigo_ad">
+          <DataField>codigo_ad</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="descripcion_me">
-          <DataField>descripcion_me</DataField>
+        <Field Name="descripcion_ad">
+          <DataField>descripcion_ad</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="descripcion_pv">
-          <DataField>descripcion_pv</DataField>
+        <Field Name="impresora">
+          <DataField>impresora</DataField>
           <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="codigo_pv">
-          <DataField>codigo_pv</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_DatosMaestros</rd:DataSetName>
         <rd:SchemaPath>D:\Unicauca\Programacion\c#\SPV\SPV\SPV.Presentation\Reports\DataSet_DatosMaestros.xsd</rd:SchemaPath>
-        <rd:TableName>USP_Listado_me</rd:TableName>
+        <rd:TableName>USP_Listado_ad</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>USP_Listado_meTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>USP_Listado_adTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -512,5 +508,5 @@ kq9UAEQynN91ZpR+r+xGYWI3Er4bRAZhXopTCl6KR0oxLwX6gpfg1gejmC03PCpky1UMWxeIPkDxdpvZ
     </EmbeddedImage>
   </EmbeddedImages>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>d3196a95-0095-4480-90a4-e89429639ebd</rd:ReportID>
+  <rd:ReportID>8786cb6e-222d-4610-b94f-ff6719758361</rd:ReportID>
 </Report>

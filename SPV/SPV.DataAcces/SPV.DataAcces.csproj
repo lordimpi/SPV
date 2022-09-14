@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Conexion.cs" />
     <Compile Include="Entities\AreaDespacho.cs" />
+    <Compile Include="Entities\Producto.cs" />
     <Compile Include="Entities\Familia.cs" />
     <Compile Include="Entities\Marca.cs" />
     <Compile Include="Entities\Mesa.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Repositories\Contracts\IFamiliaRepository.cs" />
     <Compile Include="Repositories\Contracts\IMarcaRepository.cs" />
     <Compile Include="Repositories\Contracts\IMesaRepository.cs" />
+    <Compile Include="Repositories\Contracts\IProductoRepository.cs" />
     <Compile Include="Repositories\Contracts\IPuntoVentaRepository.cs" />
     <Compile Include="Repositories\Contracts\ISubFamiliaRepository.cs" />
     <Compile Include="Repositories\Contracts\IUnidadesMedidaRepository.cs" />
@@ -61,6 +63,7 @@
     <Compile Include="Repositories\Implementations\FamiliaRepository.cs" />
     <Compile Include="Repositories\Implementations\MarcaRepository.cs" />
     <Compile Include="Repositories\Implementations\MesaRepository.cs" />
+    <Compile Include="Repositories\Implementations\ProductoRepository.cs" />
     <Compile Include="Repositories\Implementations\PuntoVentaRepository.cs" />
     <Compile Include="Repositories\Implementations\SubFamiliaRepository.cs" />
     <Compile Include="Repositories\Implementations\UnidadesMedidaRepository.cs" />

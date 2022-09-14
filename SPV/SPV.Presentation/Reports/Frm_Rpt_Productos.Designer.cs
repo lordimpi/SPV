@@ -1,6 +1,6 @@
 ﻿namespace SPV.Presentation.Reports
 {
-    partial class Frm_Rpt_Unidades_Medidas
+    partial class Frm_Rpt_Productos
     {
         /// <summary>
         /// Required designer variable.
@@ -30,66 +30,66 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.uSPListadoumBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet_DatosMaestros = new SPV.Presentation.Reports.DataSet_DatosMaestros();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.Txt_p1 = new System.Windows.Forms.TextBox();
-            this.uSP_Listado_umTableAdapter = new SPV.Presentation.Reports.DataSet_DatosMaestrosTableAdapters.USP_Listado_umTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.uSPListadoumBindingSource)).BeginInit();
+            this.dataSet_DatosMaestros = new SPV.Presentation.Reports.DataSet_DatosMaestros();
+            this.uSPListadoprBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uSP_Listado_prTableAdapter = new SPV.Presentation.Reports.DataSet_DatosMaestrosTableAdapters.USP_Listado_prTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_DatosMaestros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSPListadoprBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // uSPListadoumBindingSource
+            // reportViewer1
             // 
-            this.uSPListadoumBindingSource.DataMember = "USP_Listado_um";
-            this.uSPListadoumBindingSource.DataSource = this.dataSet_DatosMaestros;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.uSPListadoprBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SPV.Presentation.Reports.Rpt_Productos.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1579, 640);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // Txt_p1
+            // 
+            this.Txt_p1.Location = new System.Drawing.Point(16, 59);
+            this.Txt_p1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Txt_p1.Name = "Txt_p1";
+            this.Txt_p1.Size = new System.Drawing.Size(132, 22);
+            this.Txt_p1.TabIndex = 4;
+            this.Txt_p1.Visible = false;
             // 
             // dataSet_DatosMaestros
             // 
             this.dataSet_DatosMaestros.DataSetName = "DataSet_DatosMaestros";
             this.dataSet_DatosMaestros.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // uSPListadoprBindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.uSPListadoumBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "SPV.Presentation.Reports.Rpt_Unidades_Medidas.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1112, 652);
-            this.reportViewer1.TabIndex = 0;
+            this.uSPListadoprBindingSource.DataMember = "USP_Listado_pr";
+            this.uSPListadoprBindingSource.DataSource = this.dataSet_DatosMaestros;
             // 
-            // Txt_p1
+            // uSP_Listado_prTableAdapter
             // 
-            this.Txt_p1.Location = new System.Drawing.Point(35, 59);
-            this.Txt_p1.Margin = new System.Windows.Forms.Padding(4);
-            this.Txt_p1.Name = "Txt_p1";
-            this.Txt_p1.Size = new System.Drawing.Size(132, 22);
-            this.Txt_p1.TabIndex = 4;
-            this.Txt_p1.Visible = false;
+            this.uSP_Listado_prTableAdapter.ClearBeforeFill = true;
             // 
-            // uSP_Listado_umTableAdapter
-            // 
-            this.uSP_Listado_umTableAdapter.ClearBeforeFill = true;
-            // 
-            // Frm_Rpt_Unidades_Medidas
+            // Frm_Rpt_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 652);
+            this.ClientSize = new System.Drawing.Size(1579, 640);
             this.Controls.Add(this.Txt_p1);
             this.Controls.Add(this.reportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Frm_Rpt_Unidades_Medidas";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "Frm_Rpt_Productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Rpt_Unidades_Medidas";
-            this.Load += new System.EventHandler(this.Frm_Rpt_Unidades_Medidas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.uSPListadoumBindingSource)).EndInit();
+            this.Text = "Frm_Rpt_Productos";
+            this.Load += new System.EventHandler(this.Frm_Rpt_Productos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataSet_DatosMaestros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uSPListadoprBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,8 +99,8 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         internal System.Windows.Forms.TextBox Txt_p1;
-        private System.Windows.Forms.BindingSource uSPListadoumBindingSource;
+        private System.Windows.Forms.BindingSource uSPListadoprBindingSource;
         private DataSet_DatosMaestros dataSet_DatosMaestros;
-        private DataSet_DatosMaestrosTableAdapters.USP_Listado_umTableAdapter uSP_Listado_umTableAdapter;
+        private DataSet_DatosMaestrosTableAdapters.USP_Listado_prTableAdapter uSP_Listado_prTableAdapter;
     }
 }

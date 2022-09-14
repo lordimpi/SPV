@@ -1,5 +1,6 @@
 ﻿using SPV.DataAcces.Entities;
 using SPV.Infrastructure.Services.Contracts;
+using SPV.Presentation.Reports;
 using System;
 using System.Windows.Forms;
 
@@ -233,14 +234,14 @@ namespace SPV.Presentation
 
         private void Btn_reporte_Click(object sender, EventArgs e)
         {
-            if (Dgv_Listado.Rows.Count > 0)
+            if (Dgv_Listado.Rows.Count == 0)
             {
                 MessageBox.Show("No hay registros para hacer reportes", "Aviso del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            //Frm_Rpt_Area_Despacho oRpt_ad = new Frm_Rpt_Area_Despacho();
-            //oRpt_ad.Txt_p1.Text = Txt_buscar.Text.Trim();
-            //oRpt_ad.ShowDialog();
+            Frm_Rpt_Area_Despacho oRpt_ad = new Frm_Rpt_Area_Despacho();
+            oRpt_ad.Txt_p1.Text = Txt_buscar.Text.Trim();
+            oRpt_ad.ShowDialog();
         }
 
         private void Btn_salir_Click(object sender, EventArgs e)

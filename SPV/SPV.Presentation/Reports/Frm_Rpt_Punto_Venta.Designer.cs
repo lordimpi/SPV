@@ -30,14 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.uSPListadopvBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_DatosMaestros = new SPV.Presentation.Reports.DataSet_DatosMaestros();
             this.Txt_p1 = new System.Windows.Forms.TextBox();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSet_DatosMaestros = new SPV.Presentation.Reports.DataSet_DatosMaestros();
-            this.uSPListadopvBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.uSP_Listado_pvTableAdapter = new SPV.Presentation.Reports.DataSet_DatosMaestrosTableAdapters.USP_Listado_pvTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_DatosMaestros)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPListadopvBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_DatosMaestros)).BeginInit();
             this.SuspendLayout();
+            // 
+            // uSPListadopvBindingSource
+            // 
+            this.uSPListadopvBindingSource.DataMember = "USP_Listado_pv";
+            this.uSPListadopvBindingSource.DataSource = this.dataSet_DatosMaestros;
+            // 
+            // dataSet_DatosMaestros
+            // 
+            this.dataSet_DatosMaestros.DataSetName = "DataSet_DatosMaestros";
+            this.dataSet_DatosMaestros.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Txt_p1
             // 
@@ -62,16 +72,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(1111, 694);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dataSet_DatosMaestros
-            // 
-            this.dataSet_DatosMaestros.DataSetName = "DataSet_DatosMaestros";
-            this.dataSet_DatosMaestros.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // uSPListadopvBindingSource
-            // 
-            this.uSPListadopvBindingSource.DataMember = "USP_Listado_pv";
-            this.uSPListadopvBindingSource.DataSource = this.dataSet_DatosMaestros;
-            // 
             // uSP_Listado_pvTableAdapter
             // 
             this.uSP_Listado_pvTableAdapter.ClearBeforeFill = true;
@@ -83,12 +83,13 @@
             this.ClientSize = new System.Drawing.Size(1111, 694);
             this.Controls.Add(this.Txt_p1);
             this.Controls.Add(this.reportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_Rpt_Punto_Venta";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Rpt_Punto_Venta";
             this.Load += new System.EventHandler(this.Frm_Rpt_Punto_Venta_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_DatosMaestros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uSPListadopvBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_DatosMaestros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
